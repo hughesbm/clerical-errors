@@ -38,6 +38,9 @@ gem 'jbuilder', '~> 2.5'
 # Use bootstrap v4 for css framework
 gem 'bootstrap', '~> 4.0.0.alpha6'
 
+# Use Simple Form for forms
+gem 'simple_form'
+
 # Use tether for tooltips
 source 'https://rails-assets.org' do
   gem 'rails-assets-tether', '>= 1.3.3'
