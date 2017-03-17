@@ -1,0 +1,13 @@
+// Bootstrap 4 Options:
+
+$enable-flex: true;
+$enable-rounded: false;
+
+// Style variables:
+
+$brand-color: #cd001f;
+$brand-color-light: lighten($brand-color, 25%);
+$brand-color-dark: darken($brand-color, 25%);
+
+$brand-font: 'IM Fell English SC', serif;
+$text-font: 'Lato', sans-serif;

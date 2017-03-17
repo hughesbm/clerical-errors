@@ -11,4 +11,9 @@
  * It is generally better to create a new file per style scope.
  *
  */
+@import 'variables';
 @import 'bootstrap';
+@import 'navbar';
+@import 'typo';
+@import 'body';
+@import 'https://fonts.googleapis.com/css?family=Lato|IM+Fell+English+SC';
