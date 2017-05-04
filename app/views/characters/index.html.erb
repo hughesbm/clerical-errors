@@ -1,7 +1,18 @@
 <div class="container">
   <div class="row">
     <div class="col col-xs-auto text-center">
-      <h1>Character Generator</h1>
+      <h1>Characters</h1>
     </div>
+  </div>
+  <hr />
+  <div class="row">
+    <% @characters.each do |character| %>
+      <div class="col col-xs-8">
+        <h3>Name: <%= link_to character.name, character_path(character) %></h3>
+        <p>Race: <%= character.race %></p>
+        <p>XP: <%= character.xp %></p>
+        <p>Description: <%= character.description %></p>
+      </div>
+    <% end %>
   </div>
 </div>

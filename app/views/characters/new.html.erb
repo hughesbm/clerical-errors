@@ -1,0 +1,18 @@
+<div class="container">
+  <div class="row">
+    <div class="col col-xs-auto text-center">
+      <h2 class="brand-header">Create Character</h2>
+      <%= simple_form_for @character do |f| %>
+        <div class="form-inputs">
+          <%= f.input :name %>
+          <%= f.input :race %>
+          <%= f.input :xp %>
+          <%= f.input :description %>
+        </div>
+        <div class="form-actions">
+          <%= f.button :submit, 'Save Character', class: 'btn btn-brand btn-lg', id: 'submit-button' %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
