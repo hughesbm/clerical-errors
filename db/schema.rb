@@ -10,20 +10,39 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170504202159) do
+ActiveRecord::Schema.define(version: 20170504213722) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "characters", force: :cascade do |t|
     t.string   "name"
-    t.integer  "race",       default: 0, null: false
-    t.integer  "class",      default: 0, null: false
-    t.integer  "level",      default: 1, null: false
-    t.datetime "created_at",             null: false
-    t.datetime "updated_at",             null: false
+    t.integer  "race",        default: 0, null: false
+    t.integer  "background",  default: 0, null: false
+    t.integer  "xp",          default: 0, null: false
+    t.string   "alignment"
+    t.string   "player_name"
+    t.integer  "age"
+    t.string   "height"
+    t.string   "weight"
+    t.string   "eyes"
+    t.string   "skin"
+    t.string   "hair"
+    t.string   "gender"
+    t.string   "picture"
+    t.text     "description"
     t.integer  "user_id"
+    t.datetime "created_at",              null: false
+    t.datetime "updated_at",              null: false
     t.index ["user_id"], name: "index_characters_on_user_id", using: :btree
+  end
+
+  create_table "levels", force: :cascade do |t|
+    t.integer "class_level",  default: 1, null: false
+    t.integer "base_class",   default: 0, null: false
+    t.integer "sub_class",    default: 0, null: false
+    t.integer "character_id"
+    t.index ["character_id"], name: "index_levels_on_character_id", using: :btree
   end
 
   create_table "users", force: :cascade do |t|
