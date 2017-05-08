@@ -13,7 +13,8 @@ class Character < ApplicationRecord
     class_levels_hash = {}
 
     levels.each do |level|
-      class_levels_hash[{ base: level.base_class, sub: level.sub_class }] += 1
+      class_hash = { base: level.base_class, sub: level.sub_class }
+      class_levels_hash[class_hash].nil? ? class_levels_hash[class_hash] = 1 : class_levels_hash[class_hash] += 1
     end
 
     class_levels_hash
