@@ -2,9 +2,20 @@
   <div class="row">
     <div class="col col-xs-auto text-center">
       <h1><%= current_character.name %></h1>
+      <p>Level: <%= current_character.level %></p>
+      <p>Class:
+        <% if current_character.levels.exists? %>
+          <% current_character.class_levels.each do |key, value| %>
+            <br />
+            <%= key[:base].to_s + ": " + key[:sub].to_s + " (" + value.to_s + ")" %>
+          <% end %>
+        <% end %>
+      </p>
       <p>Race: <%= current_character.race %></p>
       <p>XP: <%= current_character.xp %></p>
       <p>Description: <%= current_character.description %></p>
+      <hr />
+      <h2><%= link_to "Add Level", new_character_level_path(current_character) %></h2>
     </div>
   </div>
 </div>
