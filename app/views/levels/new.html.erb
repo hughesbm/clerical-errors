@@ -1,0 +1,21 @@
+<div class="container">
+  <div class="row">
+    <div class="col col-xs-auto text-center">
+      <h2 class="brand-header">Add Level</h2>
+      <hr />
+      <h3>Character: <%= current_character.name %></h3>
+      <h3>Level: <%= current_character.level + 1 %></h3>
+      <hr />
+
+      <%= simple_form_for @level, url: character_levels_path(current_character) do |f| %>
+        <div class="form-inputs">
+          <%= f.input :base_class %>
+          <%= f.input :sub_class %>
+        </div>
+        <div class="form-actions">
+          <%= f.button :submit, 'Add Level', class: 'btn btn-brand btn-lg', id: 'submit-button' %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
