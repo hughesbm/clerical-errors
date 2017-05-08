@@ -38,7 +38,6 @@ ActiveRecord::Schema.define(version: 20170504213722) do
   end
 
   create_table "levels", force: :cascade do |t|
-    t.integer  "class_level",  default: 1, null: false
     t.integer  "base_class",   default: 0, null: false
     t.integer  "sub_class",    default: 0, null: false
     t.integer  "character_id"
