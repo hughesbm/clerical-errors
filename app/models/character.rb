@@ -1,5 +1,6 @@
 class Character < ApplicationRecord
   belongs_to :user
+  belongs_to :race
   has_many :levels
 
   validates :name, presence: true, length: { minimum: 3, maximum: 30 }
