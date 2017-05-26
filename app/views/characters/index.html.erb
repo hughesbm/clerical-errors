@@ -6,6 +6,8 @@
     </div>
   </div>
   <hr />
+  <%= react_component("CharacterList", { characters: @characters }) %>
+  <hr />
   <div class="row">
     <% @characters.each do |character| %>
       <div class="col col-xs-8">
