@@ -2,8 +2,8 @@ class CreateCharacters < ActiveRecord::Migration[5.0]
   def change
     create_table :characters do |t|
       t.string  :name
-      t.integer :race, default: 0, null: false
-      t.integer :background, default: 0, null: false
+      t.integer :race_id
+      t.integer :background_id
       t.integer :xp, default: 0, null: false
       t.string  :alignment
       t.string  :player_name
